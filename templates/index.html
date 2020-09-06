@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <script src="{% static 'js/script.js' %}"></script>
+    <title>Сайт программиста</title>
+</head>
+<body>
+    <div class="wallper">
+        <div class="header">
+            <div class="nav">
+                <span class="logo">PyGuDev</span>
+                <div class="back-collapse">
+                <ul class="navbar collapse">
+                    <li class="item-link"><button onclick="goTo(about)">Обо мне</button></li>
+                    <li class="item-link"><button onclick="goTo(portfolio)">Портфолио</button></li>
+                    <li class="item-link"><button onclick="goTo(ask_me)">Связатся со мной</button></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="avatar">
+                <img src="/static/img/myphoto/myphoto.jpg"/>
+            </div>
+            <div class="about-info">
+                <h2>Обо мне</h2>
+                <p>Всем привет, я начинающий программист, зовут меня Евгений.
+                    Я из тех людей, которые всегда совершенствуются в своём выбранном направлении, чтобы в будущем создавать нечто интересное и полезное, уникальное и нетипичное. Программирую я на языке Python 3. Сейчас развиваюсь в направление web-разработки, уже умею работать с django, rest framewor, git, изучаю docker, знаю linux.</p>
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="header-portfolio">
+                <h2>Мои проекты</h2>
+            </div>
+            <div class="row-card">
+            <div class="card" id="card">
+                <div class="image main" id="main"><span id="back"><button onclick="backImage()"><</button></span><img src="/static/img/potfolio/main.jpg" alt=""><span id="next"><button onclick="nextImage()">></button></span></div>
+                <div class="image" id="main"><img id="image1" src="/static/img/potfolio/main.jpg" alt=""></div>
+                <div class="image"><img id="image2" src="/static/img/potfolio/about.jpg" alt=""></div>
+                <div class="image"><img id="image3" src="/static/img/potfolio/blog.jpg" alt=""></div>
+                <div class="image"><img id="image4" src="/static/img/potfolio/reg.jpg" alt=""></div>
+            </div>
+            <div class="info-project">
+                <h3>Описание</h3>
+                <p>Этот сайт я сделал для своей мамы, он состоит из фронтенда на Vue js, и бэкенда на Django rest. Реализовал вывод постов, файлов, сделал модель пользователей с регистрацией и авторизацией.Также реализована система заданий для учеников, с их проверкой и выставлением оценки, еще можно написать учителю сделан чат</p>
+            </div>
+            </div>
+        </div>
+        <div class="ask-me">
+            <div class="form-block">
+                <h2>Связатся со мной</h2>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <label>Email</label>
+                    <input type="email" name="email" id="email">
+                    <label>Текст обращения</label>
+                    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <footer>
+                <span>©PyGuDev 2020</span>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

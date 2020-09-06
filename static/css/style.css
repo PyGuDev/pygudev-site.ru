@@ -1,0 +1,273 @@
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wallper{
+    width: 100%;
+}
+.header{
+    width: 100%;
+    background: url('/static/img/header-background.png');
+    height: 750px;
+    
+}
+.nav{
+    width: 74%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    align-self: center;
+    display: flex;
+    align-self: center;
+}
+.logo{
+    font-family: 'Anton', sans-serif;
+    font-size: 38px;
+    color: rgb(54, 54, 54);
+    flex-grow: 0.8;
+}
+.navbar{
+    display: flex;
+    align-self: center;
+}
+.item-link{
+    margin-left: 8px;
+    list-style: none;
+    
+}
+.item-link button{
+    color: rgb(43, 43, 43);
+    font-size: 19px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    border: solid 2px;
+    text-decoration: none;
+    padding: 2px;
+    background: none;
+}
+.item-link button:hover{
+    color: rgb(88, 88, 88);
+}
+.item-link button:focus{
+    outline: none;
+}
+.about{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+.avatar{
+    margin: 5px;
+    width: 40%;
+}
+.avatar img{
+    border: solid 2px;
+    width: 100%;
+}
+.about-info{
+    padding: 10px;
+    width: 60%;
+    border: solid 2px black;
+    margin-left: 20px
+}
+.about-info h2{
+    color: rgb(48, 48, 48);
+    font-family: 'Robot', sans-serif;
+    text-align: center;
+}
+.about-info p{
+    color: rgb(48, 48, 48);
+    font-size: 16px;
+    font-family: 'Robot', sans-serif;
+}
+.portfolio{
+    width: 100%;
+}
+.header-portfolio{
+    width: 100%;
+    text-align: center;
+    font-family: 'Robot', sans-serif;
+}
+.row-card{
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card{
+    width: 70%;
+    display: flex;
+    align-content: center;
+}
+#next{
+    font-family: 'Robot', sans-serif;
+    display: block;
+    position: relative;
+    margin-left: -30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#next button{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    border: none;
+    background: none;
+    font-weight: 700;
+}
+#next button:focus{
+    outline: none;
+}
+#back{
+    font-family: 'Robot', sans-serif;
+    color: white;
+    font-size: 30px;
+    display: block;
+    position: relative;
+    margin-right: -30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#back button{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    border: none;
+    background: none;
+    font-weight: 700;
+}
+#back button:focus{
+    outline: none;
+}
+.main{
+    width: 100%!important;
+    display: flex!important;
+}
+.image{
+    display: none;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.4s all ease-in-out;
+}
+.image img{
+    width: 100%;
+    border-radius: 5px;
+}
+.info-project{
+    width: 30%;
+    margin-left: 20px;
+    margin-right: auto;
+    font-family: 'Robot', sans-serif;
+    margin-top: 20px;
+    border: solid 2px black;
+    padding: 10px;
+}
+.info-project h3{
+    text-align: center;
+}
+.ask-me{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+.form-block{
+    width: 100%;
+}
+.form-block h2{
+    text-align: center;
+    font-family: 'Robot', sans-serif;
+}
+.form-block form{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-family: 'Robot', sans-serif;
+}
+.form-block form input{
+    margin-bottom: 10px;
+    padding: 6px;
+}
+.form-block form textarea{
+    padding: 6px;
+    margin-bottom: 10px;
+}
+.form-block form button{
+    margin-bottom: 10px;
+    padding: 6px;
+    font-family: 'Robot', sans-serif;
+}
+.footer{
+    width: 100%;
+    background: gray;
+    height: 60px;
+    margin-top: 100px;
+}
+.footer footer{
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: 'Robot', sans-serif;
+    color: white;
+}
+
+@media screen and (max-width: 768px){
+.about{
+    width: 90%;
+}
+}
+@media screen and (max-width: 750px){
+    .nav{
+        flex-direction: column;
+        width: 100%;
+    }
+    .logo{
+        flex-grow: 0;
+        margin-left: 40px;
+    }
+    .collapse{
+        flex-direction: column;
+        padding: 1px 0px 10px 20px;
+    }
+    .item-link{
+        padding-bottom: 5px;
+    }
+    .item-link a{
+        border: 0;
+        opacity: 100%;
+    }
+    .about{
+        flex-direction: column;
+        width: 100%;
+    }
+    .avatar{
+        width: 50%;
+    }
+    .row-card{
+        display: flex;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+    }
+    .card{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .info-project{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
